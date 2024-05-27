@@ -1,0 +1,12 @@
+<div>
+  <h2>Edit User</h2>
+  <form (ngSubmit)="updateUser()">
+    <label>Name:</label>
+    <input [(ngModel)]="user.name" name="name" required>
+    <label>Email:</label>
+    <input [(ngModel)]="user.email" name="email" required>
+    <label>Password:</label>
+    <input [(ngModel)]="user.password" name="password" required>
+    <button type="submit">Update</button>
+  </form>
+</div>

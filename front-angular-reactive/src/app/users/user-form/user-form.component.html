@@ -1,0 +1,26 @@
+<div>
+    <h2>{{ userId ? 'Edit' : 'Add' }} User</h2> <!-- userId está definido -->
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()"> <!-- userForm está definido, onSubmit también -->
+      <div>
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" formControlName="password" type="password" />
+      </div>
+      <div>
+        <label for="username">Username</label>
+        <input id="username" formControlName="username" />
+      </div>
+      <div>
+        <button type="submit">Save</button>
+        <a [routerLink]="['/users']">Cancel</a>
+      </div>
+    </form>
+  </div>
+  

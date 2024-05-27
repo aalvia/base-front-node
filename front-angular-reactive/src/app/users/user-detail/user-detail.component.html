@@ -1,0 +1,20 @@
+<div *ngIf="user">
+    <h2>{{ user.name }} Details</h2>
+    <div>
+      <label>Name: </label>
+      <span>{{ user.name }}</span>
+    </div>
+    <div>
+      <label>Email: </label>
+      <span>{{ user.email }}</span>
+    </div>
+    <div>
+      <label>Username: </label>
+      <span>{{ user.username }}</span>
+    </div>
+    <div>
+      <a [routerLink]="['/users/edit', user._id]">Edit</a>
+      <a [routerLink]="['/users']">Back to List</a>
+    </div>
+  </div>
+  
